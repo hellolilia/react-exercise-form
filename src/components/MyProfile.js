@@ -36,6 +36,7 @@ class MyProfile extends Component {
                     Name
                     <input type='text'
                            name='name'
+                           placeholder='Your name'
                            onChange={this.handleChange}
                            value={this.state.name}/>
                 </label>
@@ -52,6 +53,7 @@ class MyProfile extends Component {
                     Description
                     <input type='text'
                            name='description'
+                           placeholder='Description about yourself'
                            onChange={this.handleChange}
                            value={this.state.description}/>
                 </label>
@@ -60,10 +62,11 @@ class MyProfile extends Component {
                        name='tick'
                        checked={this.state.tick}
                        onChange={this.handleChange}/>
-                I have read the terms of conduct
+                       I have read the terms of conduct
                 <input className='submit'
                        type='submit'
                        name='submit'
+                       value='Submit'
                        disabled={!this.state.name || !this.state.description || !this.state.tick}/>
             </form>
     }
